@@ -1,6 +1,11 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.22-alpine3.19 as build
+# Define build time argument
+ARG GO_VERSION=1.22 \
+    ALPINE_VERSION=3.19
+
+FROM golang:${GO_VERSION}-alpine${ALPINE_VERSION}
+
 LABEL version=1.0.0
 
 # Set working directory

@@ -1,8 +1,13 @@
 # syntax=docker/dockerfile:1
 
+
 # Stage 1 - Builder
 
-FROM golang:1.22-alpine3.19 as build
+# Define build time argument
+ARG GO_VERSION=1.22 \
+    ALPINE_VERSION=3.19
+
+FROM golang:${GO_VERSION}-alpine${ALPINE_VERSION} as build
 
 # Set working directory
 WORKDIR /home/go_server
@@ -26,7 +31,7 @@ RUN go build .
 
 # Stage 2 - production
 
-FROM alpine:3.19 as production
+FROM alpine:${ALPINE_VERSION} as production
 LABEL version=1.0.0
 
 # Set working directory
