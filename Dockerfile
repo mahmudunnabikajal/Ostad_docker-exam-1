@@ -18,7 +18,7 @@ ENV CGO_ENABLED=0 \
     GOOS=linux \
     PORT=8465
 
-# Build the application
+# Build the application binary
 RUN go build .
 
 # Run the binary

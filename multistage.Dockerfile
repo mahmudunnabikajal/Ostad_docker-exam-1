@@ -18,7 +18,7 @@ COPY . .
 ENV CGO_ENABLED=0 \
     GOOS=linux
 
-# Build the application
+# Build the application binary
 RUN go build .
 
 
