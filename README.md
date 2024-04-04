@@ -2,6 +2,9 @@
 
 A simple go server.
 
+## Note
+ Check [Assignment](./ASSIGNMENT.md) file for details.
+
 ### Instructions to run locally
 
 1. Configure [GO](https://go.dev/doc/install) in your system.
@@ -19,14 +22,7 @@ A simple go server.
     ```
 5. Set environment variable for running:
     * `PORT=<your_desired_port>`
-5. Run the built binary:
-    ```bash
-   ./docker-gs-ping
-    ```
-    or 
-    ```bash
-   go run .
-    ```
+5. Run the built binary: `./docker-gs-ping` or `go run .`
 
 ### Check if the server is running
 1. Go to `http://localhost:<given_port>` and check if you see "`Hello, from Ostad! <3`".

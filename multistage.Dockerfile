@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 
-# Stage 1 - Builder
+# Stage 1 - build
 
 # Define build time argument
 ARG GO_VERSION=1.22 \
